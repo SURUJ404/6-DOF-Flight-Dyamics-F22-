@@ -128,9 +128,9 @@ void test_solve_2x2() {
     A(1, 0) = 5; A(1, 1) = 7;
     std::vector<double> b = {11, 13};
     auto x = solve_linear(A, b);
-    // solution: x = [59/9, -17/9]
-    ASSERT_NEAR(x[0], 59.0 / 9.0, 1e-10);
-    ASSERT_NEAR(x[1], -17.0 / 9.0, 1e-10);
+    // solution: x = [64/9, -29/9]
+    ASSERT_NEAR(x[0], 64.0 / 9.0, 1e-10);
+    ASSERT_NEAR(x[1], -29.0 / 9.0, 1e-10);
 }
 
 void test_solve_3x3() {
@@ -420,10 +420,10 @@ int main() {
 
     printf("\n=== solve_linear Tests ===\n");
     TEST(solve_identity);
-    TEST(solve_1x1);
+    TEST(solve_identity_1x1);
     TEST(solve_2x2);
     TEST(solve_3x3);
-    TEST(solve_4x4);
+    TEST(solve_identity_4x4);
     TEST(solve_random_5x5);
     TEST(solve_singular);
     TEST(solve_dimension_mismatch);

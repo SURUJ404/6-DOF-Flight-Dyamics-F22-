@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <limits>
 #include <stdexcept>
 
 namespace f22 {
@@ -401,7 +402,8 @@ std::vector<std::complex<double>> real_eigenvalues(const Matrix& A, int max_iter
 
         ++iterations_since_deflation;
         if (iterations_since_deflation > max_iterations) {
-            for (long i = low; i <= hi; ++i) eigenvalues.emplace_back(H(i, i), 0.0 / 0.0);
+            for (long i = low; i <= hi; ++i)
+                eigenvalues.emplace_back(H(i, i), std::numeric_limits<double>::quiet_NaN());
             hi = low - 1;
             continue;
         }

@@ -4,7 +4,9 @@
 
 This document is a Markdown conversion of `f22_dynamics_solution_report.pdf`.
 
-![Reaction](assets/reaction.gif)
+<p align="center">
+  <img src="assets/reaction.gif" alt="Reaction" />
+</p>
 
 **Purpose.** This report documents the supplied F-22-class nonlinear flight-dynamics solution and the executed tests for actuator dynamics and gyroscopic coupling. The implementation is an estimated, research/engineering simulation—not a validated model of the real F-22, whose detailed aerodynamic and propulsion data are not public.
 
